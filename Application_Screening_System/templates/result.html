@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+	<header>
+		<div class="container">
+		<h2 align="center">Project Proposal Application Result</h2>
+		</div>
+	</header>
+	<div class="results">
+		{% if prediction == 1%}
+		<p style="color:blue; font-size:3;">Your project proposal <b>{{project_no}}</b> is <b>approved</b>. We will upload to our <a href="https://www.donorschoose.org">DonorsChoose.org</a> website soon. Hope you get the budget soon to help the studends.</p>
+		{% elif prediction == 0%}
+		<p style="color:#8B0000; font-size:3;">We are sorry to inform you that your project proposal <b>{{project_no}}</b> is <b>not approved</b>. See you next time.</p>
+		{% endif %}
+
+	</div>
+
+</body>
+</html>

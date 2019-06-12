@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+	<!-- <link rel="stylesheet" type="text/css" href="../static/css/styles.css"> -->
+	<link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+	<header>
+		<div class="container">
+		<h1 align="center">Project Proposal Application System</h1>
+		
+		</div>
+	</header>
+
+	<div style="width:700px; margin:0 auto;">
+
+		<form action="{{ url_for('submit')}}" method="POST">
+			<br>
+			Project No. : <input type="text" name="project_no" maxlength="40" size="40">
+			<br><br>
+			Teacher Id. : <input type="text" name="teacher_id" maxlength="40" size="40">
+			&nbsp;&nbsp;&nbsp;&nbsp;
+			<label>Title :</label>
+	        <select name="teacher_prefix">
+	          <option value="Mr.">Mr.</option>
+	          <option value="Mrs.">Mrs.</option>
+	          <option value="Ms.">Ms.</option>
+	          <option value="Dr.">Dr.</option>
+	        </select>
+	        <br><br>
+	        Total no of Projects previously posted: <input type="text" name="teacher_number_of_previously_posted_projects" maxlength="10">
+			<br><br>
+			<label>School State :</label>
+	        <select name="school_state">
+	          <option value="AL">Alabama, AL</option>
+	          <option value="AK">Alaska, AK</option>
+	          <option value="AZ">Arizona, AZ</option>
+	          <option value="AR">Arkansas, AR</option>
+	          <option value="CA">California, CA</option>
+	          <option value="CO">Colorado, CO</option>
+	          <option value="CT">Connecticut, CT</option>
+	          <option value="DE">Delaware, DE</option>
+	          <option value="FL">Florida, FL</option>
+	          <option value="GA">Georgia, GA</option>
+	          <option value="HI">Hawaii, HI</option>
+	          <option value="ID">Idaho, ID</option>
+	          <option value="IL">Illinois, IL</option>
+	          <option value="IN">Indiana, IN</option>
+	          <option value="IA">Iowa, IA</option>
+	          <option value="KS">Kansas, KS</option>
+	          <option value="KY">Kentucky, KY</option>
+	          <option value="LA">Louisiana, LA</option>
+	          <option value="ME">Maine, ME</option>
+	          <option value="MD">Maryland, MD</option>
+	          <option value="MA">Massachusetts, MA</option>
+	          <option value="MI">Michigan, MI</option>
+	          <option value="MN">Minnesota, MN</option>
+	          <option value="MS">Mississippi, MS</option>
+	          <option value="MO">Missouri, MO</option>
+	          <option value="MT">Montana, MT</option>
+	          <option value="NE">Nebraska, NE</option>
+	          <option value="NV">Nevada, NV</option>
+	          <option value="NH">New Hampshire, NH</option>
+	          <option value="NJ">New Jersey, NJ</option>
+	          <option value="NM">New Mexico, NM</option>
+	          <option value="NY">New York, NY</option>
+	          <option value="NC">North Carolina, NC</option>
+	          <option value="ND">North Dakota, ND</option>
+	          <option value="OH">Ohio, OH</option>
+	          <option value="OK">Oklahoma, OK</option>
+	          <option value="OR">Oregon<, OR/option>
+	          <option value="PA">Pennsylvania, PA</option>
+	          <option value="RI">Rhode Island, RI</option>
+	          <option value="SC">South Carolina, SC</option>
+	          <option value="SD">South Dakota, SD</option>
+	          <option value="TN">Tennessee, TN</option>
+	          <option value="TX">Texas, TX</option>
+	          <option value="UT">Utah, UT</option>
+	          <option value="VT">Vermount, VT</option>
+	          <option value="VA">Virginia, VA</option>
+	          <option value="WA">Washington, WA</option>
+	          <option value="WV">West Virginia, WV</option>
+	          <option value="WI">Wisconsin, WI</option>
+	          <option value="WY">Wyoming, WY</option>
+	        </select>
+			&nbsp;&nbsp;&nbsp;&nbsp;
+			<label>Project Grade Categories :</label>
+	        <select name="project_grade_category">
+	          <option value="Grades PreK-2">Grades PreK-2</option>
+	          <option value="Grades 3-5">Grades 3-5</option>
+	          <option value="Grades 6-8">Grades 6-8</option>
+	          <option value="Grades 9-12">Grades 9-12</option>
+	        </select>
+	        <br><br>
+	        Project Subject Categories : 
+	        <br>
+	        <input type="text" name="project_subject_categories" maxlength="150" size="100">
+			<br><br>
+			Project Subject SubCategories : 
+			<br>
+			<input type="text" name="project_subject_subcategories" maxlength="200" size="100">
+	        <br><br>
+	        Project Item Description : 
+	        <br>
+	        <input type="text" name="project_item" maxlength="150" size="100">
+			<br><br>
+			Quantity : <input type="text" name="item_quantity" maxlength="20" size="20">
+			&nbsp;&nbsp;&nbsp;&nbsp;
+			Price : <input type="text" name="item_price" maxlength="20" size="20">
+			<br><br>
+	  		<p>Project Title : </p>
+			<textarea name="project_title" rows="1" cols="100"></textarea>
+			<br>
+			<p>Project Essay 1: Describe your students</p>
+			<textarea name="project_essay_1_2" rows="10" cols="100"></textarea>
+			<br>
+			<p>Project Essay 2: About your project</p>
+			<textarea name="project_essay_3_4" rows="10" cols="100"></textarea>
+			<br>
+			<p>Project Resource Summary: </p>
+			<textarea name="project_resource_summary" rows="4" cols="100"></textarea>
+			<br>
+		<input type="submit" class="btn-info" value="Submit">
+		
+		</form>	
+	</div>
+
+	
+	
+
+</body>
+</html>
